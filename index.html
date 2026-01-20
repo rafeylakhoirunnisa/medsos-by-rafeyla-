@@ -1,291 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>indonesiannoodles</title>
-
-<!-- Bootstrap Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<title>Company Profile</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
-
-    body {
-        margin: 0;
-        background: #ffffff;
-        display: flex;
-        justify-content: center;
-    }
-
-    .app {
-        width: 390px;
-        background: #ffffff;
-        min-height: 100vh;
-    }
-
-    /* Header */
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 14px;
-        font-weight: bold;
-    }
-
-    /* Profile */
-    .profile {
-        padding: 15px
-    }
-
-    .profile-top {
-        display: flex;
-        align-items: center;
-    }
-
-    .avatar {
-        width: 80px;
-        height: 80px;
-        border-radius:50%;
-        margin-right: 16px;
-    }
-    .stats {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        text-align: center;
-    }
-
-    .stats div strong {
-        display: block;
-        font-size: 18px;
-    }
-
-    /* Buttons */
-    .buttons {
-        display: flex;
-        gap: 20px;
-        margin-top: 10px;
-    }
-
-    .btn {
-        flex: 1;
-        padding: 8px;
-        border-radius: 20px;
-        background: #999999;
-        border: none;
-        font-size: 14px;
-        cursor: pointer;
-    }
-
-    .btn-icon {
-        flex: 0;
-        width: 40px;
-    }
-
-    /* Highlights */
-    .highlights {
-    display: flex;
-    gap: 30px;
-    padding: 14px;
-    margin-left: -60px;
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.highlight-item {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #e0e0e0; /* warna ring */
-    padding: 3px;
+body {
+    margin: 0;
+    background: #f4f4f4;
+    color: #000000;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: #000000;
+    color: #fff;
+    padding: 16px 32px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 0px;
 }
 
-.highlight-item img {
+header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+nav a {
+    color: #aeadad;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: #851f1f;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero img {
+    width: 180px;
+    height: 120%;
+    object-fit: cover;
+}
+
+
+.hero h2 {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* ===== SECTION ===== */
+.section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* ===== ABOUT ===== */
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: left;
+    text-align: center;
+}
+
+.about img {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    border-radius: 10px;
+    
+}
+
+/* ===== SERVICES ===== */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background: #931b1b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    display: block;
-    background: #fff;
-}
-.highlight-item img {
     cursor: pointer;
 }
 
-
-    /* Tabs */
-    .tabs {
-        display: flex;
-        justify-content: space-around;
-        border-top: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        padding: 8px 0;
-        font-size: 20px;
-    }
-    .tabs {
-    cursor: pointer;
+/* ===== CONTACT ===== */
+.contact {
+    text-align: center;
 }
 
-
-    /* Grid */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2px;
-    }
-
-    .post {
-        background: #b22222;
-        aspect-ratio: 1/1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-        font-weight: bold;
-        font-size: 14px;
-    }
-
-    /* Bottom Nav */
-    .bottom-nav {
-        display: flex;
-        justify-content: space-around;
-        border-top: 1px solid #ddd;
-        padding: 10px 0;
-        font-size: 22px;
-    }
-    .bottom-nav {
-    cursor: pointer;
+.contact p {
+    margin: 6px 0;
 }
 
-    .post img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+/* ===== FOOTER ===== */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
     }
-    .post img {
-    cursor: pointer;
-}
 
-    .nav-avatar {
-    width: 26px;        
-    height: 26px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="app">
+<!-- HEADER -->
+<header>
+    <h1>PT Indonesian Noodles</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">Tentang</a>
+        <a href="#services">Layanan</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#contact">Kontak</a>
+    </nav>
+</header>
 
-    <!-- Header -->
-    <div class="header">
-        <span>indonesiannoodles</span>
-        <i class="bi bi-three-dots-vertical"></i>
+<!-- HERO -->
+<section class="hero" id="home">
+    <img src="maps-indo.png" alt="Logo">
+    <h2> AUTHENTIC INDONESIAN INSTANT NOODLES </h2>
+    <p>We produce authentic Indonesian instant noodles inspired by Nusantara flavors.</p>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <h3>ABOUT US </h3>
+    <div class="about">
+        <p>
+           We are an Indonesian food company dedicated to creating high-quality instant noodles inspired by the rich flavors of Nusantara. 
+           By combining authentic recipes, carefully selected ingredients, and modern production standards, we deliver products that represent the true taste of Indonesia. 
+           <p>
+           Our commitment goes beyond flavor. We prioritize food safety, quality consistency, and continuous innovation to ensure every serving meets international standards. 
+           Through our products, we aim to introduce Indonesian culinary heritage to a wider audience, both locally and globally.
+           </p>
+           <p>
+            We believe great food connects cultures. That’s why we continuously innovate to bring the essence of Nusantara cuisine to modern lifestyles, 
+            making Indonesian flavors accessible anytime, anywhere.
+           </p>
+        </p>
+        <img src="maps-indo.png">
     </div>
+</section>
 
-    <!-- Profile -->
-    <div class="profile">
-        <div class="profile-top">
-            <div><img src="indonesian noodels.jpg" class="avatar" alt="profile">
-            </div>
-            
-            <div class="stats">
-                <div><strong>7</strong>posts</div>
-                <div><strong>10k</strong>followers</div>
-                <div><strong>100</strong>following</div>
-            </div>
+<!-- SERVICES -->
+<section class="section" id="services">
+    <h3>OUR SERVICE </h3>
+    <div class="services">
+        <div class="service">
+            <h4>MANUFACTURING</h4>
+            <p>We operate modern and hygienic production facilities to ensure high-quality instant noodles that meet national and international food safety standards.</p>
         </div>
-
-        <div class="buttons">
-            <button class="btn">Follow</button>
-            <button class="btn">Message</button>
-            <button class="btn btn-icon">
-                <i class="bi bi-person-plua"></i>
-            </button>
+        <div class="service">
+            <h4>PRODUCT DEVELOPMENT</h4>
+            <p>We continuously develop new flavors inspired by Indonesian cuisine, combining traditional recipes with innovative food technology.</p>
         </div>
-        
-        
+        <div class="service">
+            <h4>QUALITY ASSURANCE</h4>
+            <p>Every product undergoes strict quality control processes to guarantee consistency, safety, and superior taste.</p>
+        </div>
+        <div class="service">
+            <h4>DISTRIBUTION</h4>
+            <p>With an extensive distribution network, we deliver our products efficiently to markets across Indonesia and international destinations.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- Highlights -->
-    <div class="highlights">
-        <div class="highlight"></div>
-        <div class="highlight"></div>
-        <div class="highlight"></div>
-        <div class="highlight"></div>
-        <div class="highlights">
-    <div class="highlight-item">
-        <img src="maps indonesia.jpg" alt="Highlight 1">
+<!-- GALLERY -->
+<section class="section" id="gallery">
+    <h3>OUR PRODUCT</h3>
+    <div class="gallery">
+        <img src="mie-sumatra.jpeg">
+        <img src="mie-jawa.jpeg">
+        <img src="mie-kalimantan.jpeg">
+        <img src="mie-sulawesi.jpeg">
+        <img src="mie-bali.jpeg">
+        <img src="pop-mie.jpeg">
+        <img src="premium-collection.jpeg">
+        <img src="sepesial-edition.jpeg">
     </div>
-    <div class="highlight-item">
-        <img src="maps indonesia.jpg" alt="Highlight 2">
-    </div>
-    <div class="highlight-item">
-        <img src="maps indonesia.jpg" alt="Highlight 3">
-    </div>
-    <div class="highlight-item">
-        <img src="maps indonesia.jpg" alt="Highlight 4">
-    </div>
-</div>
+</section>
 
-    </div>
+<!-- CONTACT -->
+<section class="section contact" id="contact">
+    <h3>CONTACT US</h3>
+    <p>📍 Jakarta, Indonesia</p>
+    <p>📞 0812-3456-7890</p>
+    <p>✉️ info@indonesiannoodles.co.id</p>
+</section>
 
-    <!-- Tabs -->
-    <div class="tabs">
-        <i class="bi bi-grid-3x3-gap"></i>
-        <i class="bi bi-play-btn"></i>
-        <i class="bi bi-person"></i>
-    </div>
-
-    <!-- Posts -->
-    <div class="grid">
-    <div class="post">
-        <img src="mie sumatra.jpeg" alt="">
-    </div>
-    <div class="post">
-        <img src="mie jawa.jpeg" alt="">
-    </div>
-    <div class="post">
-        <img src="mie kalimantan.jpeg" alt="">
-    </div>
-     <div class="post">
-        <img src="mie sulawesi.jpeg" alt="">
-    </div>
-     <div class="post">
-        <img src="mie bali .jpeg" alt="">
-    </div>
-     <div class="post">
-        <img src="sepesial edition .jpeg" alt="">
-    </div>
-     <div class="post">
-        <img src="pop mie .jpeg" alt="">
-    </div>
-     <div class="post">
-        <img src="premium collection .jpeg" alt="">
-    </div>
-
-</div>
-
-
-    <!-- Bottom Navigation -->
-    <div class="bottom-nav">
-        <i class="bi bi-house"></i>
-        <i class="bi bi-search"></i>
-        <i class="bi bi-plus-square"></i>
-        <i class="bi bi-play-btn"></i>
-        
-        <img src="indonesian noodels.jpg" class="nav-avatar">
-    </div>
-
-</div>
+<!-- FOOTER -->
+<footer>
+    © 2026 PT Indonesian Noodles. All Rights Reserved.
+</footer>
 
 </body>
 </html>
